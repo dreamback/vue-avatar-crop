@@ -1,10 +1,10 @@
 # v-avatar-crop
 
-> vue 头像剪切
+> vue 头像裁剪
 
 ## 特性
 
-* 头像剪切
+* 头像裁剪
 * 头像拖拽缩放
 
 ## demo gif
