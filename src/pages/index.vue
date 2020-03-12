@@ -4,6 +4,7 @@
     <ul class="avatar-list">
       <li>
         <div class="avatar avatar-round">
+          <img :src="src">
           <avatar-input
           class="avatar-input"
           @success="success"
@@ -11,7 +12,6 @@
           :size="4"
           accept="image/*"
           />
-          <img :src="src">
         </div>
       </li>
     </ul>
@@ -74,14 +74,17 @@ h1{text-align: center;font-size: 32px;color: #41B883;padding: 20px;}
       }
       .avatar-input{
         position: absolute;
-        width: 100%;
-        height: 100%;
+        display: block;
+        width: 128px;
+        height: 128px;
+        top:0;
         left: 0;
-        height: 0;
         font-size: 200px;
         opacity: 0;
+        z-index: 10;
       }
       img{
+        pointer-events: none;
         width: 100%;
       }
     }

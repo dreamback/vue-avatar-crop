@@ -1,6 +1,6 @@
 {
   "name": "v-avatar-crop",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A Vue.js avatar crop component",
   "author": "heshimeng1987@qq.com",
   "main": "lib/index.min.js",
@@ -87,5 +87,5 @@
     "H5头像剪切",
     "微信头像剪切"
   ],
-  "homepage": "https://github.com/dreamback/v-avatar-crop"
+  "homepage": "https://github.com/dreamback/vue-avatar-crop"
 }
