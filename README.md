@@ -11,7 +11,7 @@
 <img src="https://dreamback.github.io/vue-avatar-crop/static/demo.gif"> 
 
 ## 手机扫码
-<img src="https://github.com/dreamback/vue-avatar-crop/blob/master/docs/static/qrcode.png?raw=true">  
+<img src="https://dreamback.github.io/vue-avatar-crop/static/qrcode.png">  
 
 [在线预览](https://dreamback.github.io/vue-avatar-crop/)
 
