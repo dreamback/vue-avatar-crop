@@ -1,27 +1,83 @@
-# image_cropping
+# v-avatar-crop
 
-> A Vue.js project
+> vue 头像剪切
 
-## Build Setup
+## 特性
 
-``` bash
-# install dependencies
-npm install
+* 头像剪切
+* 头像拖拽缩放
 
-# serve with hot reload at localhost:8080
-npm run dev
+## demo gif
+<img src="https://dreamback.github.io/vue-avatar-crop/static/demo.gif"> 
 
-# build for production with minification
-npm run build
+## 手机扫码
+<img src="https://dreamback.github.io/vue-avatar-crop/static/qrcode.png">  
 
-# build for production and view the bundle analyzer report
-npm run build --report
+[在线预览](https://dreamback.github.io/vue-avatar-crop/)
 
-# run unit tests
-npm run unit
 
-# run all tests
-npm test
+## 说明
+配套包含两个组件
+* `avatarInput` 封装`<input type="file"/>`负责选择文件
+* `avatarCrop` 负责头像拖拽缩放裁剪等
+
+## 像往常一样使用
+```
+npm i v-avatar-crop --save
+```
+组件引用
+``` javascript
+import {avatarCrop, avatarInput} from 'v-avatar-crop'
+...
+...
+  components: {
+    [avatarCrop.name]: avatarCrop,
+    [avatarInput.name]: avatarInput
+  },
+  methods:{
+    success ({dataUrl, blob}) {
+      // ajax upload img data
+      this.src = dataUrl
+      console.log(dataUrl)
+      console.log(blob)
+    },
+    error (message) {
+      console.log(message)
+    }
+  }
+
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+``` html
+<template>
+<div>
+  <!-- size 限制图片文件大小，M单位 -->
+  <avatar-input
+    @success="success"
+    @error="error"
+    :size="4" 
+    accept="image/*"
+  />
+
+  ....
+
+  <avatar-crop
+    :width="200"
+    :height="200"
+  ></avatar-crop>
+
+</div>
+</template>
+```
+
+
+[github](https://github.com/dreamback/vue-avatar-crop)  
+
+## 其它
+
+图片压缩代码参考来自
+https://github.com/didi/mand-mobile/tree/master/components/image-reader
+
+## 开源协议
+
+本项目基于 [MIT](https://zh.wikipedia.org/wiki/MIT%E8%A8%B1%E5%8F%AF%E8%AD%89) 协议，请自由地享受和参与开源。
